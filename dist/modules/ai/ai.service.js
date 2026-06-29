@@ -58,7 +58,7 @@ let AiService = class AiService {
             const response = await (0, rxjs_1.firstValueFrom)(this.httpService.get(`${this.aiServiceBaseUrl}/health`));
             return response.data;
         }
-        catch (error) {
+        catch (_error) {
             return { status: 'unhealthy' };
         }
     }

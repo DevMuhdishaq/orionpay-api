@@ -31,10 +31,10 @@ export declare class AuthService {
     }>;
     validateUser(userId: string): Promise<import("../users/entities/user.entity").User | null>;
     private walletNonces;
-    generateNonce(walletAddress: string, chain: string): Promise<{
+    generateNonce(walletAddress: string, chain: string): {
         nonce: string;
         message: string;
-    }>;
+    };
     verifyWalletSignature(walletAddress: string, chain: string, signature: string, message: string, nonce: string): Promise<{
         access_token: string;
         user: any;

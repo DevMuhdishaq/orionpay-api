@@ -23,7 +23,7 @@ let UsersController = class UsersController {
     }
     async create(createUserDto) {
         const user = await this.usersService.create(createUserDto);
-        const { password, ...result } = user;
+        const { password: _password, ...result } = user;
         return result;
     }
     getProfile(req) {
@@ -31,8 +31,8 @@ let UsersController = class UsersController {
     }
     async findAll() {
         const users = await this.usersService.findAll();
-        return users.map(user => {
-            const { password, ...result } = user;
+        return users.map((user) => {
+            const { password: _password, ...result } = user;
             return result;
         });
     }

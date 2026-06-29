@@ -25,7 +25,7 @@ interface PriceAnalysisResult {
     current_price_usd: number;
     weekly_change_percent: number;
     monthly_change_percent: number;
-    "7day_forecast": number[];
+    '7day_forecast': number[];
     insights: string[];
 }
 export declare class AiService {

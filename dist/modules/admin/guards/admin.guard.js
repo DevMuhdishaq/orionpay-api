@@ -35,7 +35,7 @@ let AdminGuard = class AdminGuard {
                 isAdmin: payload.isAdmin,
             };
         }
-        catch (error) {
+        catch (_error) {
             throw new common_1.UnauthorizedException('Invalid or expired token');
         }
         return true;
